@@ -60,7 +60,7 @@ export default function HomeScreen({
           </p>
           <div className="flex flex-wrap justify-center gap-3">
             <span className="bg-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full">
-              🎮 5 Modul Kuis
+              🎮 9 Modul Kuis
             </span>
             <span className="bg-white/20 text-white text-sm font-semibold px-4 py-2 rounded-full">
               📚 Lembar Balik Interaktif
@@ -78,11 +78,11 @@ export default function HomeScreen({
           Pilih Modul Belajar
         </h2>
         <p className="text-gray-500 text-center mb-8 text-sm sm:text-base">
-          Setiap modul memiliki materi bacaan dan 10 soal kuis. Ayo mulai
-          belajar!
+          Setiap modul memiliki materi bacaan dan soal kuis interaktif. Ayo
+          mulai belajar!
         </p>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-4">
           {MODULES.map((mod, idx) => (
             <button
               type="button"

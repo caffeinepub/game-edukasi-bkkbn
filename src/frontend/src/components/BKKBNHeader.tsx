@@ -1,11 +1,13 @@
 interface BKKBNHeaderProps {
   onHome: () => void;
   onGlobalLeaderboard: () => void;
+  onAdmin: () => void;
 }
 
 export default function BKKBNHeader({
   onHome,
   onGlobalLeaderboard,
+  onAdmin,
 }: BKKBNHeaderProps) {
   return (
     <header className="bg-white shadow-md sticky top-0 z-50">
@@ -52,6 +54,14 @@ export default function BKKBNHeader({
             className="text-[#003087] font-semibold text-sm hover:text-[#F5B700] transition-colors hidden sm:block"
           >
             Papan Peringkat
+          </button>
+          <button
+            type="button"
+            data-ocid="header.admin.link"
+            onClick={onAdmin}
+            className="text-[#E07B00] font-semibold text-sm hover:text-[#B85E00] transition-colors hidden sm:block border border-[#E07B00] rounded-lg px-3 py-1"
+          >
+            ⚙️ Admin
           </button>
           <button
             type="button"

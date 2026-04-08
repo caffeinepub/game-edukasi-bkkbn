@@ -3,7 +3,11 @@ export type ModuleId =
   | "pernikahan"
   | "pus"
   | "remaja-berprestasi"
-  | "kespro";
+  | "kespro"
+  | "anak-perlindungan"
+  | "remaja-calon-pengantin"
+  | "pus-kbpp"
+  | "lansia-keluarga";
 
 export type QuestionType = "multiple-choice" | "true-false" | "fill-blank";
 
@@ -67,4 +71,5 @@ export type AppView =
   | { type: "results"; moduleId: ModuleId; playerName: string; score: number }
   | { type: "lembar-balik-after"; moduleId: ModuleId }
   | { type: "leaderboard-module"; moduleId: ModuleId }
-  | { type: "leaderboard-global" };
+  | { type: "leaderboard-global" }
+  | { type: "admin-dashboard" };

@@ -1,0 +1,20 @@
+// Version: 1.0.0
+type LeaderboardEntry__252692527 =
+  {
+    moduleId : Text;
+    moduleName : Text;
+    playerName : Text;
+    score : Nat;
+    timestamp : Int;
+    totalQuestions : Nat
+  };
+type Nat__490723111 = Nat__920180692;
+type Nat__920180692 = Nat;
+actor {
+  stable allGameResults :
+    {
+      var blockIndex : Nat__490723111;
+      var blocks : [var [var ?LeaderboardEntry__252692527]];
+      var elementIndex : Nat__490723111
+    }
+};

@@ -10,7 +10,20 @@ import type { ActorMethod } from '@icp-sdk/core/agent';
 import type { IDL } from '@icp-sdk/core/candid';
 import type { Principal } from '@icp-sdk/core/principal';
 
-export interface _SERVICE {}
+export interface LeaderboardEntry {
+  'moduleId' : string,
+  'moduleName' : string,
+  'score' : bigint,
+  'totalQuestions' : bigint,
+  'timestamp' : bigint,
+  'playerName' : string,
+}
+export interface _SERVICE {
+  'clearAllResults' : ActorMethod<[], undefined>,
+  'getAllGameResults' : ActorMethod<[], Array<LeaderboardEntry>>,
+  'getResultsByModule' : ActorMethod<[string], Array<LeaderboardEntry>>,
+  'saveGameResult' : ActorMethod<[LeaderboardEntry], undefined>,
+}
 export declare const idlService: IDL.ServiceClass;
 export declare const idlInitArgs: IDL.Type[];
 export declare const idlFactory: IDL.InterfaceFactory;

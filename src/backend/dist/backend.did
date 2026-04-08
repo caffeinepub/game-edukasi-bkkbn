@@ -1,0 +1,15 @@
+type LeaderboardEntry = 
+ record {
+   moduleId: text;
+   moduleName: text;
+   playerName: text;
+   score: nat;
+   timestamp: int;
+   totalQuestions: nat;
+ };
+service : {
+  clearAllResults: () -> ();
+  getAllGameResults: () -> (vec LeaderboardEntry) query;
+  getResultsByModule: (moduleId: text) -> (vec LeaderboardEntry) query;
+  saveGameResult: (entry: LeaderboardEntry) -> ();
+}

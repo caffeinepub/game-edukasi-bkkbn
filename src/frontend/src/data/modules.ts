@@ -1601,4 +1601,1283 @@ export const MODULES: Module[] = [
       ),
     ],
   },
+
+  // ─── MODULE 6: Anak & Perlindungan ───────────────────────────────────────
+  {
+    id: "anak-perlindungan",
+    title: "Anak & Perlindungan",
+    subtitle:
+      "Edukasi organ reproduksi anak dan perlindungan dari kekerasan seksual",
+    emoji: "🛡️",
+    gradientFrom: "#EC4899",
+    gradientTo: "#DC2626",
+    accentColor: "#EC4899",
+    lembarBalik: [
+      {
+        title: "Mengenal Organ Reproduksi Anak",
+        emoji: "🔬",
+        content:
+          "Setiap anak berhak mengenal tubuhnya sendiri dengan benar. Organ reproduksi adalah bagian tubuh yang tertutup pakaian dalam. Mengajarkan nama yang tepat sejak dini membantu anak berkomunikasi jika terjadi sesuatu yang tidak baik.",
+        highlight:
+          "Pengetahuan tentang tubuh adalah bentuk perlindungan pertama bagi anak.",
+      },
+      {
+        title: "Cara Menjaga Kebersihan",
+        emoji: "🚿",
+        content:
+          "Kebersihan organ reproduksi sangat penting: ganti pakaian dalam setiap hari, bersihkan dengan air bersih, arah membersihkan dari depan ke belakang untuk anak perempuan, dan gunakan pakaian dalam yang bersih serta tidak terlalu ketat.",
+      },
+      {
+        title: "Sentuhan Aman vs Tidak Aman",
+        emoji: "✋",
+        content:
+          "Ajarkan anak tentang sentuhan aman (pelukan orang tua, pemeriksaan dokter dengan izin) dan sentuhan tidak aman (menyentuh bagian tubuh yang tertutup pakaian dalam tanpa alasan medis). Anak berhak menolak sentuhan yang tidak nyaman.",
+        highlight: "Tubuhku milikku — anak berhak berkata TIDAK!",
+      },
+      {
+        title: "Mengenali Child Grooming",
+        emoji: "⚠️",
+        content:
+          "Child grooming adalah proses pendekatan oleh pelaku untuk memanipulasi anak sebelum melakukan kekerasan seksual. Tanda-tanda: orang dewasa yang terlalu dekat secara pribadi, memberi hadiah berlebihan, meminta bertemu diam-diam, mengajak anak menjaga rahasia.",
+      },
+      {
+        title: "Peran Ayah dalam Perlindungan",
+        emoji: "👨‍👧",
+        content:
+          "Ayah memiliki peran vital dalam melindungi anak: membangun komunikasi terbuka, mengajarkan batasan sentuhan, mengawasi lingkungan pergaulan anak, dan menjadi sosok aman tempat anak melapor jika terjadi sesuatu yang tidak nyaman.",
+        highlight:
+          "Keterlibatan ayah mengurangi risiko anak menjadi korban kekerasan seksual.",
+      },
+    ],
+    chapters: [
+      {
+        id: 1,
+        title: "Mengenal Organ Reproduksi",
+        emoji: "🔬",
+        description:
+          "Kenali organ reproduksi, fungsinya, dan cara menjaga kebersihannya",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            101,
+            "Apa yang dimaksud dengan organ reproduksi pada anak?",
+            [
+              "Hanya organ pencernaan",
+              "Bagian tubuh yang tertutup pakaian dalam dan berkaitan dengan reproduksi",
+              "Seluruh bagian tubuh",
+              "Hanya wajah dan tangan",
+            ],
+            1,
+            "Organ reproduksi adalah bagian tubuh yang tertutup pakaian dalam, penting dikenal anak agar bisa melindungi dirinya.",
+          ),
+          tf(
+            102,
+            "Mengajarkan nama yang benar untuk organ reproduksi kepada anak sejak dini adalah hal yang baik dan penting.",
+            true,
+            "Benar. Anak yang tahu nama organ tubuhnya dengan tepat lebih mudah berkomunikasi jika terjadi sesuatu yang tidak nyaman.",
+          ),
+          mc(
+            103,
+            "Fungsi utama organ reproduksi perempuan yang akan digunakan saat dewasa adalah?",
+            [
+              "Untuk bernapas",
+              "Untuk berkembang biak dan melanjutkan keturunan",
+              "Hanya untuk buang air",
+              "Untuk menyerap makanan",
+            ],
+            1,
+            "Organ reproduksi berfungsi untuk berkembang biak dan melanjutkan keturunan, aktif secara penuh saat dewasa.",
+          ),
+          fb(
+            104,
+            "Bagian tubuh yang tertutup pakaian dalam dan tidak boleh disentuh sembarangan oleh orang lain disebut bagian ___.",
+            "Privat",
+            ["Umum", "Terbuka", "Bebas"],
+            "Bagian privat adalah area tubuh yang dilindungi pakaian dalam, hanya boleh diperiksa oleh dokter dengan izin orang tua.",
+          ),
+          tf(
+            105,
+            "Anak perempuan dan laki-laki memiliki organ reproduksi yang berbeda.",
+            true,
+            "Benar. Perbedaan organ reproduksi antara laki-laki dan perempuan adalah hal yang normal dan alami.",
+          ),
+          mc(
+            106,
+            "Mengapa anak perlu mengenal organ reproduksinya sejak dini?",
+            [
+              "Agar bisa membicarakannya dengan semua orang",
+              "Agar bisa melindungi diri dan berkomunikasi jika ada yang tidak nyaman",
+              "Tidak perlu, cukup diketahui saat dewasa",
+              "Supaya bisa mengajarkan ke teman-temannya",
+            ],
+            1,
+            "Pengetahuan dini membantu anak melindungi diri dan melaporkan jika ada yang mencoba menyentuh bagian privat mereka.",
+          ),
+        ],
+      },
+      {
+        id: 2,
+        title: "Menjaga Kebersihan",
+        emoji: "🚿",
+        description:
+          "Pelajari cara menjaga kebersihan organ reproduksi dengan benar",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            201,
+            "Cara yang benar membersihkan organ reproduksi anak perempuan adalah?",
+            [
+              "Dari belakang ke depan",
+              "Dari depan ke belakang menggunakan air bersih",
+              "Dengan sabun antiseptik kuat setiap hari",
+              "Tidak perlu dibersihkan secara khusus",
+            ],
+            1,
+            "Membersihkan dari depan ke belakang mencegah bakteri dari anus berpindah ke vagina, menghindari infeksi.",
+          ),
+          tf(
+            202,
+            "Pakaian dalam harus diganti setiap hari untuk menjaga kebersihan organ reproduksi.",
+            true,
+            "Benar. Mengganti pakaian dalam setiap hari penting untuk mencegah berkembangnya bakteri dan jamur.",
+          ),
+          mc(
+            203,
+            "Apa yang sebaiknya digunakan untuk membersihkan organ reproduksi anak sehari-hari?",
+            [
+              "Sabun berbahan kimia keras",
+              "Air bersih saja atau sabun ringan tanpa pewangi",
+              "Antiseptik rumah tangga",
+              "Bedak talc setiap hari",
+            ],
+            1,
+            "Air bersih sudah cukup untuk membersihkan organ reproduksi anak. Sabun ringan tanpa pewangi boleh digunakan seperlunya.",
+          ),
+          fb(
+            204,
+            "Siklus bulanan yang dialami perempuan yang sudah pubertas dan perlu dijaga kebersihannya disebut ___.",
+            "Menstruasi",
+            ["Ovulasi", "Pubertas", "Laktasi"],
+            "Menstruasi adalah peluruhan dinding rahim setiap bulan. Kebersihan saat menstruasi penting dengan mengganti pembalut secara rutin.",
+          ),
+          tf(
+            205,
+            "Memakai pakaian dalam yang terlalu ketat tidak mempengaruhi kesehatan organ reproduksi.",
+            false,
+            "Salah. Pakaian dalam yang terlalu ketat dapat mengganggu sirkulasi udara dan meningkatkan risiko infeksi jamur.",
+          ),
+          mc(
+            206,
+            "Berapa kali sebaiknya pakaian dalam diganti dalam sehari?",
+            [
+              "Cukup seminggu sekali",
+              "Minimal satu kali sehari, lebih sering jika kotor atau lembab",
+              "Sebulan sekali sudah cukup",
+              "Hanya saat mandi malam",
+            ],
+            1,
+            "Pakaian dalam harus diganti minimal sekali sehari, atau lebih sering jika terasa lembab atau kotor untuk menjaga kebersihan.",
+          ),
+        ],
+      },
+      {
+        id: 3,
+        title: "Mengenal Child Grooming",
+        emoji: "⚠️",
+        description:
+          "Kenali perilaku grooming dan cara melindungi diri dari manipulasi",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            301,
+            "Apa yang dimaksud dengan child grooming?",
+            [
+              "Cara merawat rambut anak",
+              "Proses manipulasi oleh pelaku untuk mendekati anak sebelum melakukan kekerasan seksual",
+              "Program bimbingan belajar anak",
+              "Kegiatan bermain bersama anak",
+            ],
+            1,
+            "Child grooming adalah taktik pelaku kejahatan seksual untuk mendekati dan memanipulasi anak secara bertahap.",
+          ),
+          tf(
+            302,
+            "Orang yang melakukan grooming selalu merupakan orang asing yang tidak dikenal.",
+            false,
+            "Salah. Pelaku grooming seringkali adalah orang yang dikenal dan dipercaya anak, seperti kerabat, tetangga, atau guru.",
+          ),
+          mc(
+            303,
+            "Mana yang merupakan tanda peringatan (warning sign) dari grooming?",
+            [
+              "Guru yang mengajari pelajaran tambahan di sekolah",
+              "Orang dewasa yang sering memberi hadiah dan mengajak bertemu diam-diam",
+              "Teman bermain yang mengajak bermain di taman umum",
+              "Dokter yang memeriksa dengan orang tua hadir",
+            ],
+            1,
+            "Pemberian hadiah berlebihan dan ajakan bertemu diam-diam adalah tanda peringatan grooming yang harus diwaspadai.",
+          ),
+          fb(
+            304,
+            "Strategi pelaku grooming meminta anak menjaga rahasia perbuatan mereka disebut ___.",
+            "Manipulasi",
+            ["Pendekatan", "Persahabatan", "Pendampingan"],
+            "Manipulasi adalah taktik grooming di mana pelaku mengontrol anak melalui rasa takut, janji, atau hadiah agar menyimpan rahasia.",
+          ),
+          tf(
+            305,
+            "Anak boleh menerima hadiah dari orang dewasa manapun tanpa memberitahu orang tuanya.",
+            false,
+            "Salah. Anak harus selalu memberitahu orang tua jika menerima hadiah dari orang dewasa, terutama jika diminta merahasiakannya.",
+          ),
+          mc(
+            306,
+            "Apa yang harus dilakukan anak jika ada orang dewasa yang mengajaknya bertemu diam-diam?",
+            [
+              "Langsung pergi memenuhi ajakan tersebut",
+              "Menolak dan segera memberitahu orang tua atau orang dewasa terpercaya",
+              "Diam saja karena tidak enak menolak",
+              "Mempertimbangkan dulu tawaran hadiahnya",
+            ],
+            1,
+            "Anak harus berani menolak dan segera memberitahu orang tua atau orang dewasa terpercaya tentang situasi tersebut.",
+          ),
+        ],
+      },
+      {
+        id: 4,
+        title: "Peran Ayah dalam Perlindungan",
+        emoji: "👨‍👧",
+        description:
+          "Pahami peran vital ayah dalam melindungi anak dari kekerasan seksual",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            401,
+            "Apa peran penting ayah dalam perlindungan anak dari kekerasan seksual?",
+            [
+              "Hanya mencari nafkah dan tidak perlu terlibat",
+              "Membangun komunikasi terbuka dan mengajarkan batasan sentuhan yang aman",
+              "Menyerahkan urusan anak sepenuhnya kepada ibu",
+              "Melarang anak berteman dengan siapapun",
+            ],
+            1,
+            "Ayah yang terlibat aktif membantu anak memahami batasan tubuh dan menciptakan ruang aman untuk melapor.",
+          ),
+          tf(
+            402,
+            "Keterlibatan ayah dalam pengasuhan anak terbukti mengurangi risiko anak menjadi korban kekerasan seksual.",
+            true,
+            "Benar. Penelitian menunjukkan bahwa anak dengan figur ayah yang aktif dan komunikatif lebih terlindungi dari kekerasan.",
+          ),
+          mc(
+            403,
+            "Bagaimana cara ayah membangun komunikasi yang baik dengan anak tentang keselamatan tubuh?",
+            [
+              "Membicarakannya hanya sekali saat anak sudah dewasa",
+              "Menghindari topik tersebut karena dianggap tabu",
+              "Membicarakan secara terbuka, menggunakan bahasa yang sesuai usia, sejak dini",
+              "Menyerahkan sepenuhnya pada guru di sekolah",
+            ],
+            2,
+            "Komunikasi terbuka sejak dini dengan bahasa yang sesuai usia membangun kepercayaan anak untuk melapor jika ada masalah.",
+          ),
+          fb(
+            404,
+            "Tindakan ayah yang aktif terlibat dalam kehidupan anak untuk melindunginya disebut pengasuhan ___.",
+            "Responsif",
+            ["Otoriter", "Permisif", "Neglektif"],
+            "Pengasuhan responsif adalah gaya pengasuhan di mana ayah peka terhadap kebutuhan anak, memberikan respons tepat, dan membangun rasa aman.",
+          ),
+          tf(
+            405,
+            "Ayah tidak perlu membicarakan topik keselamatan tubuh karena itu tugas ibu.",
+            false,
+            "Salah. Baik ayah maupun ibu memiliki peran penting dalam mengajarkan keselamatan tubuh dan perlindungan dari kekerasan.",
+          ),
+          mc(
+            406,
+            "Apa yang sebaiknya dilakukan ayah jika anaknya melapor mengalami sentuhan yang tidak nyaman?",
+            [
+              "Menghukum anak karena dianggap mempermalukan keluarga",
+              "Tidak percaya dan menganggap anak berlebihan",
+              "Mendengarkan dengan serius, menenangkan anak, dan segera melaporkan ke pihak berwenang",
+              "Menunggu bukti yang lebih kuat dulu",
+            ],
+            2,
+            "Respons ayah yang tepat adalah mendengarkan, percaya, menenangkan anak, dan segera bertindak untuk melindunginya.",
+          ),
+        ],
+      },
+    ],
+    questions: [
+      mc(
+        1,
+        "Apa yang dimaksud dengan organ reproduksi pada anak?",
+        [
+          "Hanya organ pencernaan",
+          "Bagian tubuh yang tertutup pakaian dalam dan berkaitan dengan reproduksi",
+          "Seluruh bagian tubuh",
+          "Hanya wajah dan tangan",
+        ],
+        1,
+        "Organ reproduksi adalah bagian tubuh yang tertutup pakaian dalam.",
+      ),
+    ],
+  },
+
+  // ─── MODULE 7: Remaja & Calon Pengantin ─────────────────────────────────
+  {
+    id: "remaja-calon-pengantin",
+    title: "Remaja & Calon Pengantin",
+    subtitle: "Persiapan menuju pernikahan sehat dan bertanggung jawab",
+    emoji: "💍",
+    gradientFrom: "#A855F7",
+    gradientTo: "#4338CA",
+    accentColor: "#A855F7",
+    lembarBalik: [
+      {
+        title: "Menghindari Hubungan Seksual Sebelum Menikah",
+        emoji: "🚫",
+        content:
+          "Hubungan seksual sebelum menikah membawa risiko besar: kehamilan tidak diinginkan, infeksi menular seksual, trauma psikologis, dan dampak sosial. Dari sisi agama, budaya, dan kesehatan — menunggu hingga menikah adalah pilihan terbaik.",
+        highlight:
+          "Kesucian diri adalah investasi terbaik untuk masa depan pernikahan.",
+      },
+      {
+        title: "Risiko Kehamilan Remaja",
+        emoji: "⚠️",
+        content:
+          "Kehamilan remaja membawa dampak besar: putus sekolah, komplikasi medis (preeklamsia, anemia), bayi berat lahir rendah, dampak psikologis, dan ketidakstabilan ekonomi. Angka kematian ibu remaja 2-5 kali lebih tinggi dari ibu dewasa.",
+      },
+      {
+        title: "Pemeriksaan Kesehatan Pra-Nikah",
+        emoji: "🏥",
+        content:
+          "Calon pengantin dianjurkan melakukan pemeriksaan: golongan darah, Hb, hepatitis B, HIV/AIDS, TORCH (Toxoplasma, Rubella, CMV, Herpes), dan kesuburan. Deteksi dini mencegah masalah kesehatan yang dapat diturunkan ke anak.",
+        highlight:
+          "Cek kesehatan pra-nikah adalah bukti cinta kepada pasangan dan calon anak.",
+      },
+      {
+        title: "Nutrisi Pra-Kehamilan",
+        emoji: "🥗",
+        content:
+          "Calon ibu perlu mempersiapkan nutrisi sebelum hamil: asam folat (400-800 mcg/hari), zat besi, kalsium, dan protein cukup. Mulai konsumsi suplemen asam folat minimal 3 bulan sebelum kehamilan direncanakan.",
+      },
+      {
+        title: "Persiapan Mental Calon Pengantin",
+        emoji: "🧠",
+        content:
+          "Selain fisik, kesiapan mental penting: kemampuan berkomunikasi, manajemen konflik, kesiapan menjadi orang tua, dan pemahaman tentang peran suami-istri. Konseling pra-nikah membantu pasangan membangun pondasi hubungan yang kuat.",
+      },
+    ],
+    chapters: [
+      {
+        id: 1,
+        title: "Menghindari Seks Pra-Nikah",
+        emoji: "🚫",
+        description:
+          "Pahami alasan kuat menghindari hubungan seksual sebelum menikah",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            101,
+            "Mengapa hubungan seksual sebelum menikah perlu dihindari?",
+            [
+              "Karena dilarang pemerintah saja",
+              "Karena berisiko kehamilan tidak diinginkan, IMS, dan trauma psikologis",
+              "Hanya karena aturan adat tertentu",
+              "Tidak ada alasan kuat untuk menghindarinya",
+            ],
+            1,
+            "Hubungan seksual pra-nikah berisiko kehamilan tidak diinginkan, infeksi menular seksual, dan dampak psikologis jangka panjang.",
+          ),
+          tf(
+            102,
+            "Semua agama besar di Indonesia melarang hubungan seksual sebelum menikah.",
+            true,
+            "Benar. Islam, Kristen, Katolik, Hindu, dan Budha semua mengajarkan pentingnya menjaga kesucian sebelum pernikahan.",
+          ),
+          mc(
+            103,
+            "Apa dampak psikologis dari hubungan seksual pra-nikah bagi remaja?",
+            [
+              "Tidak ada dampak psikologis",
+              "Rasa bersalah, rendah diri, trauma, dan gangguan kepercayaan diri",
+              "Menjadi lebih percaya diri",
+              "Meningkatkan prestasi belajar",
+            ],
+            1,
+            "Hubungan seksual pra-nikah dapat menyebabkan rasa bersalah, trauma, dan gangguan psikologis yang mempengaruhi kehidupan.",
+          ),
+          fb(
+            104,
+            "Kemampuan remaja untuk menolak tekanan teman dalam situasi negatif disebut ___.",
+            "Asertivitas",
+            ["Agresivitas", "Pasivitas", "Emosionalitas"],
+            "Asertivitas adalah kemampuan menyatakan pendapat dan batasan dengan tegas namun sopan, keterampilan penting bagi remaja.",
+          ),
+          tf(
+            105,
+            "Remaja yang menolak ajakan seks pra-nikah berarti tidak modern dan ketinggalan zaman.",
+            false,
+            "Salah. Menolak seks pra-nikah adalah keputusan yang cerdas, matang, dan bertanggung jawab atas kesehatan dan masa depan.",
+          ),
+          mc(
+            106,
+            "Apa yang sebaiknya dilakukan remaja yang mendapat tekanan dari pasangan untuk melakukan hubungan seksual?",
+            [
+              "Menurut saja agar hubungan tetap harmonis",
+              "Menolak dengan tegas dan mempertimbangkan apakah hubungan ini sehat",
+              "Diam saja karena tidak enak menolak",
+              "Menunda keputusan tanpa batas waktu",
+            ],
+            1,
+            "Tekanan untuk melakukan hubungan seksual adalah tanda hubungan yang tidak sehat. Menolak dengan tegas adalah respons yang tepat.",
+          ),
+        ],
+      },
+      {
+        id: 2,
+        title: "Risiko Kehamilan Remaja",
+        emoji: "⚠️",
+        description:
+          "Kenali dampak serius kehamilan di usia remaja bagi ibu dan bayi",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            201,
+            "Berapa kali lebih tinggi risiko kematian ibu remaja dibanding ibu dewasa?",
+            [
+              "Sama saja tidak ada perbedaan",
+              "2-5 kali lebih tinggi",
+              "Hanya 10% lebih tinggi",
+              "Ibu remaja justru lebih kuat",
+            ],
+            1,
+            "Angka kematian ibu remaja 2-5 kali lebih tinggi karena tubuh belum matang untuk menanggung beban kehamilan.",
+          ),
+          tf(
+            202,
+            "Kehamilan remaja dapat menyebabkan putus sekolah dan kehilangan kesempatan pendidikan.",
+            true,
+            "Benar. Kehamilan remaja sering memaksa anak muda meninggalkan pendidikan, membatasi peluang karir dan kehidupan mereka.",
+          ),
+          mc(
+            203,
+            "Apa risiko kesehatan yang paling sering dialami ibu hamil usia remaja?",
+            [
+              "Tidak ada risiko khusus",
+              "Preeklamsia, anemia, dan bayi berat lahir rendah",
+              "Justru lebih sehat karena masih muda",
+              "Hanya kelelahan ringan",
+            ],
+            1,
+            "Ibu hamil remaja rentan mengalami preeklamsia, anemia berat, dan melahirkan bayi dengan berat badan lahir rendah.",
+          ),
+          fb(
+            204,
+            "Kondisi tekanan darah tinggi berbahaya saat kehamilan yang sering dialami ibu muda disebut ___.",
+            "Preeklamsia",
+            ["Anemia", "Diabetes", "Hipertensi biasa"],
+            "Preeklamsia adalah kondisi tekanan darah tinggi disertai protein dalam urin saat hamil, berbahaya bagi ibu dan janin.",
+          ),
+          tf(
+            205,
+            "Bayi yang lahir dari ibu remaja memiliki risiko lebih tinggi mengalami berat badan lahir rendah.",
+            true,
+            "Benar. Ibu remaja sering belum mampu memenuhi kebutuhan nutrisi optimal untuk pertumbuhan janin yang sehat.",
+          ),
+          mc(
+            206,
+            "Apa dampak sosial kehamilan remaja yang paling umum di Indonesia?",
+            [
+              "Mendapat dukungan penuh dari masyarakat",
+              "Stigma sosial, putus sekolah, dan isolasi dari komunitas",
+              "Dihormati sebagai ibu muda yang berani",
+              "Mendapat beasiswa khusus dari pemerintah",
+            ],
+            1,
+            "Kehamilan remaja sering menyebabkan stigma sosial, putus sekolah, dan isolasi yang berdampak jangka panjang.",
+          ),
+        ],
+      },
+      {
+        id: 3,
+        title: "Persiapan Fisik Calon Pengantin",
+        emoji: "🏥",
+        description:
+          "Siapkan kondisi fisik optimal sebelum memasuki jenjang pernikahan",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            301,
+            "Mengapa pemeriksaan kesehatan pra-nikah penting dilakukan?",
+            [
+              "Hanya untuk memenuhi syarat administrasi saja",
+              "Mendeteksi kondisi kesehatan yang perlu ditangani sebelum menikah dan hamil",
+              "Tidak penting karena muda pasti sehat",
+              "Hanya untuk pasangan yang sudah tua",
+            ],
+            1,
+            "Pemeriksaan pra-nikah mendeteksi dini kondisi yang bisa mempengaruhi kesehatan pasangan dan calon anak.",
+          ),
+          tf(
+            302,
+            "Pemeriksaan TORCH (Toxoplasma, Rubella, CMV, Herpes) penting dilakukan calon pengantin wanita.",
+            true,
+            "Benar. Infeksi TORCH yang tidak terdeteksi dapat menyebabkan cacat bawaan atau keguguran pada kehamilan.",
+          ),
+          mc(
+            303,
+            "Vaksin apa yang dianjurkan untuk calon pengantin wanita sebelum menikah?",
+            [
+              "Tidak perlu vaksin apapun",
+              "Vaksin Tetanus Toksoid (TT) dan Hepatitis B",
+              "Hanya vaksin influenza",
+              "Vaksin untuk semua penyakit ada",
+            ],
+            1,
+            "Vaksin TT melindungi bayi dari tetanus neonatorum, sedangkan Hepatitis B mencegah penularan ke bayi.",
+          ),
+          fb(
+            304,
+            "Pemeriksaan golongan darah dan faktor rhesus penting untuk mencegah konflik ___.",
+            "Rhesus",
+            ["Golongan Darah", "Imun", "Genetik"],
+            "Konflik rhesus terjadi jika ibu rhesus negatif mengandung bayi rhesus positif, dapat berbahaya jika tidak dideteksi.",
+          ),
+          tf(
+            305,
+            "Kadar hemoglobin (Hb) calon pengantin wanita tidak perlu diperiksa.",
+            false,
+            "Salah. Anemia (Hb rendah) pada calon pengantin wanita perlu ditangani sebelum hamil untuk mencegah komplikasi.",
+          ),
+          mc(
+            306,
+            "Berapa lama sebelum menikah idealnya melakukan pemeriksaan kesehatan pra-nikah?",
+            [
+              "Satu hari sebelum menikah",
+              "Minimal 3-6 bulan sebelum menikah",
+              "Setelah menikah saja tidak masalah",
+              "Tidak ada waktu yang tepat",
+            ],
+            1,
+            "Pemeriksaan 3-6 bulan sebelum menikah memberikan cukup waktu untuk menangani masalah kesehatan yang ditemukan.",
+          ),
+        ],
+      },
+      {
+        id: 4,
+        title: "Persiapan Kehamilan Sehat",
+        emoji: "🤰",
+        description:
+          "Rencanakan kehamilan sehat dengan persiapan nutrisi dan pemeriksaan yang tepat",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            401,
+            "Kapan sebaiknya calon ibu mulai mengonsumsi suplemen asam folat?",
+            [
+              "Setelah positif hamil",
+              "Minimal 3 bulan sebelum kehamilan direncanakan",
+              "Hanya saat trimester ketiga",
+              "Tidak perlu suplemen, cukup makanan biasa",
+            ],
+            1,
+            "Asam folat perlu dikonsumsi 3 bulan sebelum hamil untuk mencegah cacat tabung saraf pada janin.",
+          ),
+          tf(
+            402,
+            "Asam folat hanya dibutuhkan oleh ibu yang sudah hamil.",
+            false,
+            "Salah. Asam folat sebaiknya dikonsumsi sebelum kehamilan karena tabung saraf janin terbentuk pada minggu pertama.",
+          ),
+          mc(
+            403,
+            "Apa manfaat asam folat untuk calon ibu?",
+            [
+              "Tidak ada manfaat khusus",
+              "Mencegah cacat tabung saraf pada janin dan anemia pada ibu",
+              "Hanya untuk menjaga berat badan",
+              "Suplemen untuk kulit wajah",
+            ],
+            1,
+            "Asam folat mencegah cacat tabung saraf (spina bifida, anensefali) dan mendukung pembentukan sel darah merah.",
+          ),
+          fb(
+            404,
+            "Kondisi ideal berat badan sebelum hamil yang diukur menggunakan Indeks Masa Tubuh normal disebut ___.",
+            "Berat Badan Ideal",
+            ["Overweight", "Underweight", "Obesitas"],
+            "Berat badan ideal sebelum hamil (IMT 18,5-24,9) mendukung kehamilan sehat dan menurunkan risiko komplikasi.",
+          ),
+          tf(
+            405,
+            "Calon ayah juga perlu menjaga kesehatan sebelum kehamilan direncanakan.",
+            true,
+            "Benar. Kualitas sperma ayah mempengaruhi kesuburan dan kesehatan kehamilan. Gaya hidup sehat ayah sangat penting.",
+          ),
+          mc(
+            406,
+            "Apa yang dimaksud dengan perawatan antenatal pertama pada kehamilan?",
+            [
+              "Operasi caesar",
+              "Kunjungan pertama ke tenaga kesehatan untuk pemeriksaan kehamilan",
+              "Pemberian obat-obatan khusus",
+              "Pemeriksaan setelah melahirkan",
+            ],
+            1,
+            "Kunjungan antenatal pertama pada trimester 1 penting untuk memastikan kehamilan sehat dan mendeteksi risiko sejak awal.",
+          ),
+        ],
+      },
+    ],
+    questions: [
+      mc(
+        1,
+        "Mengapa hubungan seksual sebelum menikah perlu dihindari?",
+        [
+          "Karena dilarang pemerintah saja",
+          "Karena berisiko kehamilan tidak diinginkan, IMS, dan trauma psikologis",
+          "Hanya karena aturan adat tertentu",
+          "Tidak ada alasan kuat untuk menghindarinya",
+        ],
+        1,
+        "Hubungan seksual pra-nikah berisiko kehamilan tidak diinginkan dan dampak psikologis.",
+      ),
+    ],
+  },
+
+  // ─── MODULE 8: PUS & KB Pascapersalinan ─────────────────────────────────
+  {
+    id: "pus-kbpp",
+    title: "PUS & KB Pascapersalinan",
+    subtitle: "KB pascapersalinan dan peran suami dalam keluarga berencana",
+    emoji: "👶",
+    gradientFrom: "#14B8A6",
+    gradientTo: "#0891B2",
+    accentColor: "#14B8A6",
+    lembarBalik: [
+      {
+        title: "KB Pascapersalinan (KBPP)",
+        emoji: "📅",
+        content:
+          "KB Pascapersalinan adalah penggunaan kontrasepsi segera setelah melahirkan untuk mencegah kehamilan terlalu cepat. WHO merekomendasikan jarak kehamilan minimal 24 bulan. KBPP melindungi kesehatan ibu dan mendukung tumbuh kembang bayi.",
+        highlight:
+          "Mulai KB segera setelah melahirkan adalah keputusan terbaik untuk keluarga.",
+      },
+      {
+        title: "Metode KB yang Tepat untuk Ibu Menyusui",
+        emoji: "💊",
+        content:
+          "KB untuk ibu menyusui: IUD (dapat dipasang 48 jam atau 6 minggu setelah melahirkan), Implan (6 minggu setelah melahirkan), Suntik progestin saja (tidak mempengaruhi ASI), dan MAL (Metode Amenore Laktasi) jika menyusui eksklusif.",
+      },
+      {
+        title: "Peran Suami dalam KB",
+        emoji: "👨‍👩‍👧",
+        content:
+          "Suami memiliki tanggung jawab aktif dalam KB: mendukung istri memilih metode yang tepat, menggunakan kondom jika diperlukan, mempertimbangkan vasektomi sebagai pilihan permanen, dan aktif hadir dalam konsultasi KB bersama tenaga kesehatan.",
+        highlight:
+          "KB adalah tanggung jawab bersama suami dan istri, bukan hanya urusan wanita.",
+      },
+      {
+        title: "ASI dan Kesehatan Pascapersalinan",
+        emoji: "🤱",
+        content:
+          "ASI eksklusif 6 bulan memberikan nutrisi terbaik dan perlindungan imun untuk bayi. Menyusui juga bermanfaat bagi ibu: membantu rahim kembali ke ukuran normal, menurunkan risiko kanker payudara, dan mempererat ikatan ibu-bayi.",
+      },
+      {
+        title: "Imunisasi Bayi Pascapersalinan",
+        emoji: "💉",
+        content:
+          "Jadwal imunisasi bayi: Hepatitis B (hari pertama), BCG + Polio tetes (bulan 1), DPT-HB-Hib + Polio (bulan 2, 3, 4), Campak/MR (bulan 9). Imunisasi lengkap melindungi bayi dari penyakit berbahaya.",
+      },
+    ],
+    chapters: [
+      {
+        id: 1,
+        title: "KB Pascapersalinan (KBPP)",
+        emoji: "📅",
+        description:
+          "Pahami pentingnya KB segera setelah melahirkan untuk kesehatan ibu dan anak",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            101,
+            "Apa tujuan utama KB Pascapersalinan (KBPP)?",
+            [
+              "Mencegah ibu dari kewajiban menyusui",
+              "Mencegah kehamilan terlalu cepat dan melindungi kesehatan ibu-bayi",
+              "Hanya untuk ibu yang tidak mau hamil lagi selamanya",
+              "Menggantikan imunisasi bayi",
+            ],
+            1,
+            "KBPP bertujuan melindungi kesehatan ibu dengan mencegah kehamilan terlalu cepat setelah persalinan.",
+          ),
+          tf(
+            102,
+            "KB pascapersalinan sebaiknya dimulai segera setelah melahirkan atau paling lambat 42 hari setelah persalinan.",
+            true,
+            "Benar. Memulai KB dalam 48 jam atau paling lambat 6 minggu setelah persalinan adalah rekomendasi kesehatan.",
+          ),
+          mc(
+            103,
+            "Berapa jarak kehamilan minimal yang direkomendasikan WHO setelah persalinan?",
+            ["3 bulan", "6 bulan", "Minimal 24 bulan (2 tahun)", "5 tahun"],
+            2,
+            "WHO merekomendasikan jarak minimal 24 bulan antar kehamilan untuk pemulihan optimal ibu dan tumbuh kembang bayi.",
+          ),
+          fb(
+            104,
+            "Metode KB alami untuk ibu yang menyusui penuh dan belum mendapat menstruasi disebut ___.",
+            "MAL",
+            ["IUD", "Implan", "Suntik"],
+            "MAL (Metode Amenore Laktasi) efektif jika ibu menyusui penuh eksklusif dan belum mengalami menstruasi kembali.",
+          ),
+          tf(
+            105,
+            "Ibu yang baru melahirkan tidak perlu KB karena menyusui sudah cukup mencegah kehamilan.",
+            false,
+            "Salah. Menyusui hanya memberikan perlindungan terbatas. KB tetap dibutuhkan untuk mencegah kehamilan tidak terencana.",
+          ),
+          mc(
+            106,
+            "Kapan IUD dapat dipasang setelah persalinan normal?",
+            [
+              "Hanya 1 tahun setelah melahirkan",
+              "Dalam 48 jam atau 6 minggu setelah persalinan",
+              "Hanya sebelum kehamilan",
+              "Tidak boleh digunakan ibu menyusui",
+            ],
+            1,
+            "IUD dapat dipasang dalam 48 jam pertama atau menunggu 6 minggu setelah persalinan untuk keamanan optimal.",
+          ),
+        ],
+      },
+      {
+        id: 2,
+        title: "Metode KB yang Tepat",
+        emoji: "💊",
+        description:
+          "Kenali berbagai metode KB dan mana yang tepat untuk ibu menyusui",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            201,
+            "Metode KB mana yang AMAN digunakan ibu menyusui tanpa mempengaruhi produksi ASI?",
+            [
+              "Pil KB kombinasi (estrogen-progestin)",
+              "IUD, Implan, dan Suntik progestin saja",
+              "Tidak ada metode KB yang aman untuk ibu menyusui",
+              "Hanya kondom yang boleh digunakan",
+            ],
+            1,
+            "IUD, Implan, dan suntik progestin saja tidak mengandung estrogen sehingga tidak mempengaruhi produksi ASI.",
+          ),
+          tf(
+            202,
+            "Pil KB kombinasi (mengandung estrogen) dapat mengurangi produksi ASI.",
+            true,
+            "Benar. Estrogen dalam pil KB kombinasi dapat mengurangi volume ASI, sehingga tidak dianjurkan untuk ibu menyusui.",
+          ),
+          mc(
+            203,
+            "Apa keunggulan metode Implan sebagai KB pascapersalinan?",
+            [
+              "Harus diganti setiap hari",
+              "Efektif 3-5 tahun, tidak mempengaruhi ASI, dan reversibel",
+              "Bersifat permanen dan tidak bisa dilepas",
+              "Hanya efektif selama 1 bulan",
+            ],
+            1,
+            "Implan efektif 3-5 tahun, tidak mengandung estrogen, aman untuk ibu menyusui, dan dapat dilepas kapan saja.",
+          ),
+          fb(
+            204,
+            "Metode KB pria berupa operasi kecil untuk memotong saluran sperma disebut ___.",
+            "Vasektomi",
+            ["MOP", "MOW", "Ligasi"],
+            "Vasektomi adalah prosedur KB pria permanen melalui pemotongan/pengikatan vas deferens, sangat efektif dan aman.",
+          ),
+          tf(
+            205,
+            "Suntik KB 3 bulan yang hanya mengandung progestin aman digunakan ibu menyusui.",
+            true,
+            "Benar. Suntik progestin saja (Depo Medroxyprogesterone Acetate) aman untuk ibu menyusui karena tidak mengandung estrogen.",
+          ),
+          mc(
+            206,
+            "Apa yang membedakan MOW (ligasi tuba) dengan metode KB lainnya?",
+            [
+              "MOW bersifat sementara dan bisa dibatalkan mudah",
+              "MOW adalah sterilisasi permanen yang sulit dibalik",
+              "MOW adalah jenis suntikan hormonal",
+              "MOW sama dengan pemasangan IUD",
+            ],
+            1,
+            "MOW adalah sterilisasi permanen untuk wanita yang sudah memutuskan tidak ingin hamil lagi.",
+          ),
+        ],
+      },
+      {
+        id: 3,
+        title: "Peran Suami dalam KB",
+        emoji: "👨‍👩‍👧",
+        description:
+          "Pahami tanggung jawab aktif suami dalam program keluarga berencana",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            301,
+            "Apa bentuk partisipasi aktif suami dalam program KB?",
+            [
+              "Hanya menyetujui pilihan istri tanpa terlibat",
+              "Menggunakan kondom, mendukung istri, dan mempertimbangkan vasektomi",
+              "KB hanya urusan istri, suami tidak perlu ikut",
+              "Melarang istri menggunakan KB",
+            ],
+            1,
+            "Suami dapat berpartisipasi aktif dengan menggunakan kondom, mendukung keputusan KB istri, dan mempertimbangkan vasektomi.",
+          ),
+          tf(
+            302,
+            "Kondom adalah satu-satunya metode KB yang bisa digunakan oleh pria.",
+            false,
+            "Salah. Pria memiliki dua pilihan KB: kondom (sementara) dan vasektomi (permanen).",
+          ),
+          mc(
+            303,
+            "Mengapa suami perlu hadir saat istri konsultasi KB ke tenaga kesehatan?",
+            [
+              "Karena tidak boleh pergi sendiri",
+              "Agar suami memahami pilihan KB dan mendukung keputusan bersama",
+              "Tidak perlu, cukup istri saja",
+              "Hanya jika ada masalah kesehatan",
+            ],
+            1,
+            "Kehadiran suami mendukung pengambilan keputusan KB yang tepat, meningkatkan kepatuhan, dan mempererat tanggung jawab bersama.",
+          ),
+          fb(
+            304,
+            "Sikap suami yang mendukung dan terlibat aktif dalam pengasuhan anak dan KB disebut ___.",
+            "Suami Siaga",
+            ["Suami Ideal", "Suami Baik", "Suami Hebat"],
+            "Suami Siaga (Suami Siap, Antar, Jaga) adalah konsep BKKBN untuk suami yang aktif mendukung kesehatan keluarga.",
+          ),
+          tf(
+            305,
+            "Vasektomi dapat mempengaruhi kemampuan seksual pria.",
+            false,
+            "Salah. Vasektomi hanya memotong saluran sperma, tidak mempengaruhi produksi hormon atau kemampuan seksual pria.",
+          ),
+          mc(
+            306,
+            "Apa manfaat keterlibatan suami dalam KB bagi keluarga?",
+            [
+              "Tidak ada manfaat khusus",
+              "Meningkatkan keharmonisan, mengurangi beban istri, dan meningkatkan kesejahteraan keluarga",
+              "Hanya bermanfaat jika istri sakit",
+              "Membatasi kebebasan suami",
+            ],
+            1,
+            "Suami yang terlibat aktif dalam KB berkontribusi pada kesehatan keluarga, keharmonisan rumah tangga, dan kesejahteraan anak.",
+          ),
+        ],
+      },
+      {
+        id: 4,
+        title: "Kesehatan Ibu dan Anak",
+        emoji: "🤱",
+        description:
+          "Pelajari pentingnya ASI, imunisasi, dan nutrisi pasca persalinan",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            401,
+            "Apa manfaat ASI eksklusif bagi bayi selama 6 bulan pertama?",
+            [
+              "Tidak ada manfaat khusus",
+              "Nutrisi sempurna, perlindungan imun, dan mendukung perkembangan otak",
+              "Hanya menambah berat badan bayi saja",
+              "Hanya untuk bayi lahir prematur",
+            ],
+            1,
+            "ASI eksklusif memberikan nutrisi sempurna, antibodi pelindung infeksi, dan mendukung perkembangan otak yang optimal.",
+          ),
+          tf(
+            402,
+            "Menyusui membantu rahim ibu kembali ke ukuran semula lebih cepat.",
+            true,
+            "Benar. Hormon oksitosin yang dilepas saat menyusui membantu kontraksi rahim untuk kembali ke ukuran normal.",
+          ),
+          mc(
+            403,
+            "Imunisasi pertama yang diberikan kepada bayi dalam 24 jam setelah lahir adalah?",
+            ["Vaksin BCG", "Vaksin Hepatitis B", "Vaksin Polio", "Vaksin DPT"],
+            1,
+            "Vaksin Hepatitis B diberikan segera dalam 24 jam pertama untuk mencegah penularan Hepatitis B dari ibu ke bayi.",
+          ),
+          fb(
+            404,
+            "Cairan kekuningan yang keluar pertama kali dari payudara ibu dan kaya antibodi disebut ___.",
+            "Kolostrum",
+            ["ASI Biasa", "Susu Formula", "Air Susu Peralihan"],
+            "Kolostrum adalah ASI pertama yang sangat kaya antibodi, protein, dan nutrisi esensial untuk kekebalan bayi baru lahir.",
+          ),
+          tf(
+            405,
+            "Ibu menyusui memerlukan tambahan kalori lebih banyak dari ibu hamil.",
+            true,
+            "Benar. Produksi ASI memerlukan sekitar 500 kalori tambahan per hari, sedikit lebih banyak dari kebutuhan tambahan saat hamil.",
+          ),
+          mc(
+            406,
+            "Kapan imunisasi campak (MR) pertama diberikan kepada bayi?",
+            ["Saat bayi lahir", "Usia 3 bulan", "Usia 9 bulan", "Usia 2 tahun"],
+            2,
+            "Imunisasi Campak/MR pertama diberikan pada usia 9 bulan untuk perlindungan dari campak dan rubella.",
+          ),
+        ],
+      },
+    ],
+    questions: [
+      mc(
+        1,
+        "Apa tujuan utama KB Pascapersalinan (KBPP)?",
+        [
+          "Mencegah ibu dari kewajiban menyusui",
+          "Mencegah kehamilan terlalu cepat dan melindungi kesehatan ibu-bayi",
+          "Hanya untuk ibu yang tidak mau hamil lagi selamanya",
+          "Menggantikan imunisasi bayi",
+        ],
+        1,
+        "KBPP bertujuan melindungi kesehatan ibu dengan mencegah kehamilan terlalu cepat.",
+      ),
+    ],
+  },
+
+  // ─── MODULE 9: Lansia & Keluarga ────────────────────────────────────────
+  {
+    id: "lansia-keluarga",
+    title: "Lansia & Keluarga",
+    subtitle: "Dukungan keluarga untuk kesehatan reproduksi lansia",
+    emoji: "👴",
+    gradientFrom: "#F59E0B",
+    gradientTo: "#EA580C",
+    accentColor: "#F59E0B",
+    lembarBalik: [
+      {
+        title: "Perimenopause & Menopause",
+        emoji: "🌸",
+        content:
+          "Menopause adalah berhentinya menstruasi secara permanen, biasanya terjadi antara usia 45-55 tahun. Perimenopause adalah masa transisi 2-8 tahun sebelumnya. Gejala umum: hot flashes, gangguan tidur, perubahan mood, dan kekeringan vagina.",
+        highlight:
+          "Menopause adalah proses alami, bukan penyakit. Dukungan keluarga sangat berarti.",
+      },
+      {
+        title: "Andropause pada Pria Lansia",
+        emoji: "👴",
+        content:
+          "Andropause adalah penurunan kadar hormon testosteron pada pria di atas usia 50 tahun secara bertahap. Gejala: penurunan energi, perubahan suasana hati, penurunan libido, dan gangguan tidur. Berbeda dari menopause, andropause terjadi lebih lambat.",
+      },
+      {
+        title: "Dukungan Keluarga untuk Lansia",
+        emoji: "❤️",
+        content:
+          "Keluarga berperan penting: mendengarkan keluhan tanpa menghakimi, mendampingi ke fasilitas kesehatan, mendorong gaya hidup aktif, memastikan nutrisi terpenuhi, dan memberikan afirmasi positif bahwa perubahan yang dialami adalah normal.",
+        highlight:
+          "Satu kata dukungan dari anak atau cucu lebih berharga dari seribu obat.",
+      },
+      {
+        title: "Penyakit Reproduksi Lansia Wanita",
+        emoji: "🔍",
+        content:
+          "Risiko meningkat seiring usia: kanker serviks (dapat dicegah dengan vaksin HPV dan tes Pap smear), kanker ovarium, kanker payudara, dan prolaps uteri. Deteksi dini melalui pemeriksaan rutin sangat meningkatkan peluang kesembuhan.",
+      },
+      {
+        title: "Penyakit Reproduksi Lansia Pria",
+        emoji: "🏥",
+        content:
+          "Pria lansia rentan terhadap: hiperplasia prostat jinak (BPH), kanker prostat, dan disfungsi ereksi. Pemeriksaan PSA (Prostate-Specific Antigen) dianjurkan setelah usia 50 tahun. Gaya hidup sehat dapat mengurangi risiko secara signifikan.",
+      },
+    ],
+    chapters: [
+      {
+        id: 1,
+        title: "Perimenopause & Menopause",
+        emoji: "🌸",
+        description:
+          "Pahami perubahan hormonal menopause dan cara menghadapinya dengan sehat",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            101,
+            "Pada usia berapa wanita umumnya mengalami menopause?",
+            [
+              "Usia 30-35 tahun",
+              "Usia 40-44 tahun",
+              "Usia 45-55 tahun",
+              "Usia 60-70 tahun",
+            ],
+            2,
+            "Menopause umumnya terjadi antara usia 45-55 tahun, rata-rata di usia 51 tahun di Indonesia.",
+          ),
+          tf(
+            102,
+            "Menopause adalah kondisi penyakit yang harus diobati dengan segera.",
+            false,
+            "Salah. Menopause adalah proses alami berhentinya menstruasi, bukan penyakit. Gejalanya dapat dikelola dengan dukungan yang tepat.",
+          ),
+          mc(
+            103,
+            "Apa gejala perimenopause yang paling umum dikeluhkan wanita?",
+            [
+              "Rambut tumbuh lebih lebat",
+              "Hot flashes, gangguan tidur, dan perubahan mood",
+              "Menstruasi menjadi lebih teratur",
+              "Berat badan turun drastis",
+            ],
+            1,
+            "Hot flashes (rasa panas tiba-tiba), gangguan tidur, dan perubahan mood adalah gejala perimenopause yang paling umum.",
+          ),
+          fb(
+            104,
+            "Penurunan hormon estrogen yang drastis pada wanita menopause dapat menyebabkan pengeroposon tulang disebut ___.",
+            "Osteoporosis",
+            ["Artritis", "Anemia", "Hipertensi"],
+            "Osteoporosis terjadi karena estrogen membantu menjaga kepadatan tulang; penurunannya mempercepat kehilangan massa tulang.",
+          ),
+          tf(
+            105,
+            "Wanita menopause tidak perlu melakukan pemeriksaan kesehatan reproduksi karena sudah tidak aktif secara seksual.",
+            false,
+            "Salah. Wanita menopause tetap perlu pemeriksaan rutin untuk deteksi dini kanker dan masalah kesehatan reproduksi lainnya.",
+          ),
+          mc(
+            106,
+            "Apa yang dapat dilakukan wanita untuk mengelola gejala menopause secara alami?",
+            [
+              "Berhenti berolahraga sama sekali",
+              "Olahraga teratur, pola makan sehat, dan hindari stres berlebih",
+              "Minum jamu setiap hari tanpa konsultasi dokter",
+              "Mengisolasi diri dari keluarga",
+            ],
+            1,
+            "Gaya hidup sehat seperti olahraga teratur, diet seimbang, dan manajemen stres membantu mengelola gejala menopause.",
+          ),
+        ],
+      },
+      {
+        id: 2,
+        title: "Andropause pada Pria",
+        emoji: "👴",
+        description:
+          "Kenali perubahan hormonal pada pria lansia dan cara mengelolanya",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            201,
+            "Apa yang dimaksud dengan andropause?",
+            [
+              "Menopause pada pria yang terjadi tiba-tiba",
+              "Penurunan bertahap hormon testosteron pada pria usia lanjut",
+              "Penyakit prostat yang berbahaya",
+              "Gangguan psikologis pada lansia pria",
+            ],
+            1,
+            "Andropause adalah penurunan kadar testosteron secara bertahap pada pria, umumnya dimulai usia 40-50 tahun.",
+          ),
+          tf(
+            202,
+            "Andropause pada pria terjadi sama cepatnya dengan menopause pada wanita.",
+            false,
+            "Salah. Andropause terjadi lebih lambat dan bertahap dibanding menopause wanita, sehingga sering tidak disadari.",
+          ),
+          mc(
+            203,
+            "Apa gejala umum andropause yang sering dirasakan pria lansia?",
+            [
+              "Suara menjadi lebih tinggi",
+              "Penurunan energi, libido menurun, perubahan suasana hati",
+              "Pertumbuhan rambut yang lebih lebat",
+              "Tidak ada perubahan apapun",
+            ],
+            1,
+            "Gejala andropause meliputi penurunan energi, libido, massa otot, dan perubahan suasana hati.",
+          ),
+          fb(
+            204,
+            "Hormon utama pria yang kadarnya menurun saat andropause disebut ___.",
+            "Testosteron",
+            ["Estrogen", "Progesteron", "Insulin"],
+            "Testosteron adalah hormon seks utama pria yang berperan dalam energi, libido, massa otot, dan kesehatan reproduksi.",
+          ),
+          tf(
+            205,
+            "Gaya hidup sehat dapat membantu memperlambat dan meringankan gejala andropause.",
+            true,
+            "Benar. Olahraga teratur, tidur cukup, diet seimbang, dan hindari rokok dapat membantu mengelola gejala andropause.",
+          ),
+          mc(
+            206,
+            "Apa yang sebaiknya dilakukan pria lansia jika mengalami gejala andropause yang mengganggu?",
+            [
+              "Mendiamkan saja karena tidak berbahaya",
+              "Konsultasi ke dokter untuk pemeriksaan dan penanganan yang tepat",
+              "Mengonsumsi suplemen tanpa resep dokter",
+              "Menghindari semua aktivitas fisik",
+            ],
+            1,
+            "Konsultasi medis penting untuk memastikan diagnosis yang tepat dan mendapat penanganan sesuai kondisi pria lansia.",
+          ),
+        ],
+      },
+      {
+        id: 3,
+        title: "Dukungan Keluarga",
+        emoji: "❤️",
+        description:
+          "Pelajari cara keluarga mendukung kesehatan reproduksi lansia dengan penuh kasih",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            301,
+            "Apa peran utama keluarga dalam mendukung lansia yang mengalami menopause atau andropause?",
+            [
+              "Mengabaikan perubahan yang terjadi",
+              "Memberikan dukungan emosional, menemani ke dokter, dan memastikan gizi terpenuhi",
+              "Menganggap keluhan sebagai berlebihan",
+              "Menyuruh lansia untuk tidak mengeluh",
+            ],
+            1,
+            "Dukungan keluarga berupa empati, pendampingan medis, dan pemenuhan kebutuhan gizi sangat penting bagi kesehatan lansia.",
+          ),
+          tf(
+            302,
+            "Perubahan suasana hati ibu yang sedang menopause seringkali membuat keluarga kesal dan tidak perlu dimaklumi.",
+            false,
+            "Salah. Perubahan suasana hati saat menopause disebabkan perubahan hormonal. Keluarga perlu memahami dan bersabar.",
+          ),
+          mc(
+            303,
+            "Bagaimana keluarga dapat membantu lansia menjaga kesehatan reproduksinya?",
+            [
+              "Melarang lansia pergi ke dokter",
+              "Mengingatkan dan menemani pemeriksaan kesehatan rutin",
+              "Tidak perlu ikut campur urusan kesehatan lansia",
+              "Hanya memberikan obat-obatan yang dijual bebas",
+            ],
+            1,
+            "Mengingatkan dan menemani lansia untuk pemeriksaan rutin membantu deteksi dini masalah kesehatan reproduksi.",
+          ),
+          fb(
+            304,
+            "Program BKKBN untuk pembinaan kesehatan lansia melalui keluarga disebut ___.",
+            "BKL",
+            ["BKB", "BKR", "PIKR"],
+            "BKL (Bina Keluarga Lansia) adalah program BKKBN yang membina keluarga dalam merawat dan mendukung lansia di rumah.",
+          ),
+          tf(
+            305,
+            "Lansia yang aktif bersosialisasi dengan keluarga dan masyarakat cenderung lebih sehat secara mental.",
+            true,
+            "Benar. Interaksi sosial yang aktif mencegah depresi dan demensia, mendukung kesehatan mental lansia secara signifikan.",
+          ),
+          mc(
+            306,
+            "Apa dampak positif jika keluarga aktif mendampingi lansia menjalani gaya hidup sehat?",
+            [
+              "Lansia menjadi lebih bergantung",
+              "Meningkatkan kualitas hidup, mencegah komplikasi, dan memperkuat ikatan keluarga",
+              "Tidak ada dampak positif",
+              "Hanya berguna bagi keluarga, bukan lansia",
+            ],
+            1,
+            "Pendampingan aktif keluarga meningkatkan kualitas hidup lansia, mencegah penyakit, dan mempererat hubungan keluarga.",
+          ),
+        ],
+      },
+      {
+        id: 4,
+        title: "Penyakit Reproduksi Lansia",
+        emoji: "🔍",
+        description:
+          "Kenali risiko penyakit reproduksi pada lansia dan cara pencegahannya",
+        questionsPerPlay: 3,
+        questionPool: [
+          mc(
+            401,
+            "Apa pemeriksaan yang dianjurkan untuk deteksi dini kanker serviks pada wanita?",
+            [
+              "Pemeriksaan darah rutin",
+              "Pap smear dan tes IVA",
+              "Hanya USG kandungan",
+              "Tidak perlu pemeriksaan khusus",
+            ],
+            1,
+            "Pap smear dan tes IVA (Inspeksi Visual Asam Asetat) adalah metode deteksi dini kanker serviks yang efektif dan mudah dilakukan.",
+          ),
+          tf(
+            402,
+            "Kanker prostat hanya bisa terjadi pada pria di bawah usia 40 tahun.",
+            false,
+            "Salah. Risiko kanker prostat meningkat seiring usia, paling sering terjadi pada pria di atas usia 50 tahun.",
+          ),
+          mc(
+            403,
+            "Tes apa yang dianjurkan untuk skrining kanker prostat pada pria lansia?",
+            [
+              "Pemeriksaan urin biasa",
+              "Tes PSA (Prostate-Specific Antigen) darah",
+              "Hanya pemeriksaan tekanan darah",
+              "Tes kolesterol",
+            ],
+            1,
+            "Tes PSA adalah pemeriksaan darah yang mengukur kadar antigen spesifik prostat, membantu deteksi dini kanker prostat.",
+          ),
+          fb(
+            404,
+            "Pembesaran kelenjar prostat yang jinak pada pria lansia yang menyebabkan kesulitan buang air kecil disebut ___.",
+            "BPH",
+            ["Kanker Prostat", "Prostatitis", "Infeksi Saluran Kemih"],
+            "BPH (Benign Prostatic Hyperplasia) adalah pembesaran jinak prostat yang umum pada pria di atas 50 tahun, berbeda dari kanker prostat.",
+          ),
+          tf(
+            405,
+            "Vaksin HPV hanya bermanfaat bagi remaja perempuan dan tidak berguna bagi wanita yang lebih tua.",
+            false,
+            "Salah. Vaksin HPV juga bermanfaat bagi wanita dewasa hingga usia 45 tahun untuk mencegah infeksi HPV yang belum pernah terkena.",
+          ),
+          mc(
+            406,
+            "Faktor risiko utama kanker serviks yang dapat dicegah adalah?",
+            [
+              "Usia terlalu muda",
+              "Infeksi HPV (Human Papillomavirus) melalui hubungan seksual",
+              "Terlalu sering berolahraga",
+              "Kurang makan sayuran",
+            ],
+            1,
+            "HPV adalah penyebab utama kanker serviks. Vaksinasi HPV dan perilaku seksual yang aman dapat mencegahnya secara efektif.",
+          ),
+        ],
+      },
+    ],
+    questions: [
+      mc(
+        1,
+        "Pada usia berapa wanita umumnya mengalami menopause?",
+        [
+          "Usia 30-35 tahun",
+          "Usia 40-44 tahun",
+          "Usia 45-55 tahun",
+          "Usia 60-70 tahun",
+        ],
+        2,
+        "Menopause umumnya terjadi antara usia 45-55 tahun.",
+      ),
+    ],
+  },
 ];

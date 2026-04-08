@@ -1,4 +1,5 @@
 import { useState } from "react";
+import AdminDashboard from "./components/AdminDashboard";
 import BKKBNHeader from "./components/BKKBNHeader";
 import GlobalLeaderboardPage from "./components/GlobalLeaderboardPage";
 import HomeScreen from "./components/HomeScreen";
@@ -142,6 +143,9 @@ export default function App() {
           <GlobalLeaderboardPage onBack={() => navigate({ type: "home" })} />
         );
 
+      case "admin-dashboard":
+        return <AdminDashboard onBack={() => navigate({ type: "home" })} />;
+
       default:
         return (
           <HomeScreen
@@ -159,6 +163,7 @@ export default function App() {
       <BKKBNHeader
         onHome={() => navigate({ type: "home" })}
         onGlobalLeaderboard={() => navigate({ type: "leaderboard-global" })}
+        onAdmin={() => navigate({ type: "admin-dashboard" })}
       />
       <main>{renderView()}</main>
     </div>

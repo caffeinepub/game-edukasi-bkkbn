@@ -8,10 +8,48 @@
 
 import { IDL } from '@icp-sdk/core/candid';
 
-export const idlService = IDL.Service({});
+export const LeaderboardEntry = IDL.Record({
+  'moduleId' : IDL.Text,
+  'moduleName' : IDL.Text,
+  'score' : IDL.Nat,
+  'totalQuestions' : IDL.Nat,
+  'timestamp' : IDL.Int,
+  'playerName' : IDL.Text,
+});
+
+export const idlService = IDL.Service({
+  'clearAllResults' : IDL.Func([], [], []),
+  'getAllGameResults' : IDL.Func([], [IDL.Vec(LeaderboardEntry)], ['query']),
+  'getResultsByModule' : IDL.Func(
+      [IDL.Text],
+      [IDL.Vec(LeaderboardEntry)],
+      ['query'],
+    ),
+  'saveGameResult' : IDL.Func([LeaderboardEntry], [], []),
+});
 
 export const idlInitArgs = [];
 
-export const idlFactory = ({ IDL }) => { return IDL.Service({}); };
+export const idlFactory = ({ IDL }) => {
+  const LeaderboardEntry = IDL.Record({
+    'moduleId' : IDL.Text,
+    'moduleName' : IDL.Text,
+    'score' : IDL.Nat,
+    'totalQuestions' : IDL.Nat,
+    'timestamp' : IDL.Int,
+    'playerName' : IDL.Text,
+  });
+  
+  return IDL.Service({
+    'clearAllResults' : IDL.Func([], [], []),
+    'getAllGameResults' : IDL.Func([], [IDL.Vec(LeaderboardEntry)], ['query']),
+    'getResultsByModule' : IDL.Func(
+        [IDL.Text],
+        [IDL.Vec(LeaderboardEntry)],
+        ['query'],
+      ),
+    'saveGameResult' : IDL.Func([LeaderboardEntry], [], []),
+  });
+};
 
 export const init = ({ IDL }) => { return []; };

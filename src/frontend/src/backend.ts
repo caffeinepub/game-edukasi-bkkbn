@@ -89,10 +89,78 @@ export class ExternalBlob {
         return this;
     }
 }
+export interface LeaderboardEntry {
+    moduleId: string;
+    moduleName: string;
+    score: bigint;
+    totalQuestions: bigint;
+    timestamp: bigint;
+    playerName: string;
+}
 export interface backendInterface {
+    clearAllResults(): Promise<void>;
+    getAllGameResults(): Promise<Array<LeaderboardEntry>>;
+    getResultsByModule(moduleId: string): Promise<Array<LeaderboardEntry>>;
+    saveGameResult(entry: LeaderboardEntry): Promise<void>;
 }
 export class Backend implements backendInterface {
     constructor(private actor: ActorSubclass<_SERVICE>, private _uploadFile: (file: ExternalBlob) => Promise<Uint8Array>, private _downloadFile: (file: Uint8Array) => Promise<ExternalBlob>, private processError?: (error: unknown) => never){}
+    async clearAllResults(): Promise<void> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.clearAllResults();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.clearAllResults();
+            return result;
+        }
+    }
+    async getAllGameResults(): Promise<Array<LeaderboardEntry>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getAllGameResults();
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getAllGameResults();
+            return result;
+        }
+    }
+    async getResultsByModule(arg0: string): Promise<Array<LeaderboardEntry>> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.getResultsByModule(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.getResultsByModule(arg0);
+            return result;
+        }
+    }
+    async saveGameResult(arg0: LeaderboardEntry): Promise<void> {
+        if (this.processError) {
+            try {
+                const result = await this.actor.saveGameResult(arg0);
+                return result;
+            } catch (e) {
+                this.processError(e);
+                throw new Error("unreachable");
+            }
+        } else {
+            const result = await this.actor.saveGameResult(arg0);
+            return result;
+        }
+    }
 }
 export interface CreateActorOptions {
     agent?: Agent;

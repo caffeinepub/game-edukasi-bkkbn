@@ -1,4 +1,6 @@
+import { createActorWithConfig } from "@caffeineai/core-infrastructure";
 import { useEffect, useRef } from "react";
+import { createActor } from "../backend";
 import { useLeaderboard } from "../hooks/useLeaderboard";
 import type { Module } from "../types";
 
@@ -34,6 +36,29 @@ function getMotivation(score: number): string {
   return "Jangan menyerah! Baca kembali Lembar Balik dan coba lagi. Kamu pasti bisa mendapat skor lebih baik!";
 }
 
+function saveToBackend(
+  playerName: string,
+  moduleId: string,
+  moduleName: string,
+  score: number,
+): void {
+  // Fire-and-forget: async but don't await
+  createActorWithConfig(createActor)
+    .then((actor) =>
+      actor.saveGameResult({
+        playerName,
+        moduleId,
+        moduleName,
+        score: BigInt(score),
+        totalQuestions: BigInt(10),
+        timestamp: BigInt(Date.now()),
+      }),
+    )
+    .catch(() => {
+      // Silently ignore errors if canister not available
+    });
+}
+
 export default function ResultsPage({
   module: mod,
   playerName,
@@ -62,6 +87,8 @@ export default function ResultsPage({
       moduleId: mod.id,
       moduleTitle: mod.title,
     });
+    // Also save to backend canister (fire-and-forget)
+    saveToBackend(playerName, mod.id, mod.title, score);
   }, [addEntry, mod.id, mod.title, playerName, score]);
 
   return (
